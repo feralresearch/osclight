@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		491390E11C2445E500D82826 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 491390E01C2445E500D82826 /* AppDelegate.m */; };
+		491390E41C2445E500D82826 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 491390E31C2445E500D82826 /* main.m */; };
+		491390E71C2445E500D82826 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491390E61C2445E500D82826 /* ViewController.m */; };
+		491390E91C2445E500D82826 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491390E81C2445E500D82826 /* Assets.xcassets */; };
+		491390EC1C2445E500D82826 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491390EA1C2445E500D82826 /* Main.storyboard */; };
+		491390F71C2445E500D82826 /* OSCLightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 491390F61C2445E500D82826 /* OSCLightTests.m */; };
+		491391021C2445E500D82826 /* OSCLightUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 491391011C2445E500D82826 /* OSCLightUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		491390F31C2445E500D82826 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 491390D41C2445E500D82826 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 491390DB1C2445E500D82826;
+			remoteInfo = OSCLight;
+		};
+		491390FE1C2445E500D82826 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 491390D41C2445E500D82826 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 491390DB1C2445E500D82826;
+			remoteInfo = OSCLight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		491390DC1C2445E500D82826 /* OSCLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSCLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		491390DF1C2445E500D82826 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		491390E01C2445E500D82826 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		491390E31C2445E500D82826 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		491390E51C2445E500D82826 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		491390E61C2445E500D82826 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		491390E81C2445E500D82826 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		491390EB1C2445E500D82826 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		491390ED1C2445E500D82826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		491390F21C2445E500D82826 /* OSCLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSCLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		491390F61C2445E500D82826 /* OSCLightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSCLightTests.m; sourceTree = "<group>"; };
+		491390F81C2445E500D82826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		491390FD1C2445E500D82826 /* OSCLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSCLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		491391011C2445E500D82826 /* OSCLightUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSCLightUITests.m; sourceTree = "<group>"; };
+		491391031C2445E500D82826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		491390D91C2445E500D82826 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491390EF1C2445E500D82826 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491390FA1C2445E500D82826 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		491390D31C2445E500D82826 = {
+			isa = PBXGroup;
+			children = (
+				491390DE1C2445E500D82826 /* OSCLight */,
+				491390F51C2445E500D82826 /* OSCLightTests */,
+				491391001C2445E500D82826 /* OSCLightUITests */,
+				491390DD1C2445E500D82826 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		491390DD1C2445E500D82826 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				491390DC1C2445E500D82826 /* OSCLight.app */,
+				491390F21C2445E500D82826 /* OSCLightTests.xctest */,
+				491390FD1C2445E500D82826 /* OSCLightUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		491390DE1C2445E500D82826 /* OSCLight */ = {
+			isa = PBXGroup;
+			children = (
+				491390DF1C2445E500D82826 /* AppDelegate.h */,
+				491390E01C2445E500D82826 /* AppDelegate.m */,
+				491390E51C2445E500D82826 /* ViewController.h */,
+				491390E61C2445E500D82826 /* ViewController.m */,
+				491390E81C2445E500D82826 /* Assets.xcassets */,
+				491390EA1C2445E500D82826 /* Main.storyboard */,
+				491390ED1C2445E500D82826 /* Info.plist */,
+				491390E21C2445E500D82826 /* Supporting Files */,
+			);
+			path = OSCLight;
+			sourceTree = "<group>";
+		};
+		491390E21C2445E500D82826 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				491390E31C2445E500D82826 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		491390F51C2445E500D82826 /* OSCLightTests */ = {
+			isa = PBXGroup;
+			children = (
+				491390F61C2445E500D82826 /* OSCLightTests.m */,
+				491390F81C2445E500D82826 /* Info.plist */,
+			);
+			path = OSCLightTests;
+			sourceTree = "<group>";
+		};
+		491391001C2445E500D82826 /* OSCLightUITests */ = {
+			isa = PBXGroup;
+			children = (
+				491391011C2445E500D82826 /* OSCLightUITests.m */,
+				491391031C2445E500D82826 /* Info.plist */,
+			);
+			path = OSCLightUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		491390DB1C2445E500D82826 /* OSCLight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 491391061C2445E500D82826 /* Build configuration list for PBXNativeTarget "OSCLight" */;
+			buildPhases = (
+				491390D81C2445E500D82826 /* Sources */,
+				491390D91C2445E500D82826 /* Frameworks */,
+				491390DA1C2445E500D82826 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSCLight;
+			productName = OSCLight;
+			productReference = 491390DC1C2445E500D82826 /* OSCLight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		491390F11C2445E500D82826 /* OSCLightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 491391091C2445E500D82826 /* Build configuration list for PBXNativeTarget "OSCLightTests" */;
+			buildPhases = (
+				491390EE1C2445E500D82826 /* Sources */,
+				491390EF1C2445E500D82826 /* Frameworks */,
+				491390F01C2445E500D82826 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				491390F41C2445E500D82826 /* PBXTargetDependency */,
+			);
+			name = OSCLightTests;
+			productName = OSCLightTests;
+			productReference = 491390F21C2445E500D82826 /* OSCLightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		491390FC1C2445E500D82826 /* OSCLightUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4913910C1C2445E500D82826 /* Build configuration list for PBXNativeTarget "OSCLightUITests" */;
+			buildPhases = (
+				491390F91C2445E500D82826 /* Sources */,
+				491390FA1C2445E500D82826 /* Frameworks */,
+				491390FB1C2445E500D82826 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				491390FF1C2445E500D82826 /* PBXTargetDependency */,
+			);
+			name = OSCLightUITests;
+			productName = OSCLightUITests;
+			productReference = 491390FD1C2445E500D82826 /* OSCLightUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		491390D41C2445E500D82826 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Digital Scenographic";
+				TargetAttributes = {
+					491390DB1C2445E500D82826 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					491390F11C2445E500D82826 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 491390DB1C2445E500D82826;
+					};
+					491390FC1C2445E500D82826 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 491390DB1C2445E500D82826;
+					};
+				};
+			};
+			buildConfigurationList = 491390D71C2445E500D82826 /* Build configuration list for PBXProject "OSCLight" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 491390D31C2445E500D82826;
+			productRefGroup = 491390DD1C2445E500D82826 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				491390DB1C2445E500D82826 /* OSCLight */,
+				491390F11C2445E500D82826 /* OSCLightTests */,
+				491390FC1C2445E500D82826 /* OSCLightUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		491390DA1C2445E500D82826 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491390E91C2445E500D82826 /* Assets.xcassets in Resources */,
+				491390EC1C2445E500D82826 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491390F01C2445E500D82826 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491390FB1C2445E500D82826 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		491390D81C2445E500D82826 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491390E71C2445E500D82826 /* ViewController.m in Sources */,
+				491390E41C2445E500D82826 /* main.m in Sources */,
+				491390E11C2445E500D82826 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491390EE1C2445E500D82826 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491390F71C2445E500D82826 /* OSCLightTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491390F91C2445E500D82826 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491391021C2445E500D82826 /* OSCLightUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		491390F41C2445E500D82826 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 491390DB1C2445E500D82826 /* OSCLight */;
+			targetProxy = 491390F31C2445E500D82826 /* PBXContainerItemProxy */;
+		};
+		491390FF1C2445E500D82826 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 491390DB1C2445E500D82826 /* OSCLight */;
+			targetProxy = 491390FE1C2445E500D82826 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		491390EA1C2445E500D82826 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				491390EB1C2445E500D82826 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		491391041C2445E500D82826 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		491391051C2445E500D82826 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		491391071C2445E500D82826 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OSCLight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = digitalscenographic.com.OSCLight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		491391081C2445E500D82826 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OSCLight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = digitalscenographic.com.OSCLight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4913910A1C2445E500D82826 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OSCLightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = digitalscenographic.com.OSCLightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSCLight.app/Contents/MacOS/OSCLight";
+			};
+			name = Debug;
+		};
+		4913910B1C2445E500D82826 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OSCLightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = digitalscenographic.com.OSCLightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSCLight.app/Contents/MacOS/OSCLight";
+			};
+			name = Release;
+		};
+		4913910D1C2445E500D82826 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OSCLightUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = digitalscenographic.com.OSCLightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OSCLight;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		4913910E1C2445E500D82826 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OSCLightUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = digitalscenographic.com.OSCLightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OSCLight;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		491390D71C2445E500D82826 /* Build configuration list for PBXProject "OSCLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				491391041C2445E500D82826 /* Debug */,
+				491391051C2445E500D82826 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		491391061C2445E500D82826 /* Build configuration list for PBXNativeTarget "OSCLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				491391071C2445E500D82826 /* Debug */,
+				491391081C2445E500D82826 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		491391091C2445E500D82826 /* Build configuration list for PBXNativeTarget "OSCLightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4913910A1C2445E500D82826 /* Debug */,
+				4913910B1C2445E500D82826 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4913910C1C2445E500D82826 /* Build configuration list for PBXNativeTarget "OSCLightUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4913910D1C2445E500D82826 /* Debug */,
+				4913910E1C2445E500D82826 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 491390D41C2445E500D82826 /* Project object */;
+}
