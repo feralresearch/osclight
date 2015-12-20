@@ -8,7 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController
+@interface ViewController : NSViewController{
+    NSColor* _lightColor;
+}
+
+-(NSColor*)lightColor;
+-(void)setLightColor:(NSColor*)color;
 
 
 @end

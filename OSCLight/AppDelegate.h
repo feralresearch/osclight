@@ -7,8 +7,18 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class DSDMXManager;
+@class DSDMXLamp;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate>{
+    
+    
+    NSColor* _lightColor;
+    
+}
+
+@property DSDMXManager* dmxMgr;
+@property DSDMXLamp* lamp;
 
 
 @end

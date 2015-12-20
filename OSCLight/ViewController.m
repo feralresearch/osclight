@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import "AppDelegate.h"
+#import "DSDMXLamp.h"
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -20,6 +21,20 @@
     [super setRepresentedObject:representedObject];
 
     // Update the view, if already loaded.
+}
+
+-(NSColor*)lightColor{
+    return _lightColor;
+}
+-(void)setLightColor:(NSColor*)color{
+    [self willChangeValueForKey:@"lightColor"];
+    
+    _lightColor=color;
+    
+    AppDelegate* thisAppDelegate = (AppDelegate*)[[NSApplication sharedApplication] delegate];
+
+    [thisAppDelegate.lamp setNSColor:color];
+    [self didChangeValueForKey:@"lightColor"];
 }
 
 @end
