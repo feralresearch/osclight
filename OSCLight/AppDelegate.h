@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 @class DSDMXManager;
 @class DSDMXLamp;
+@class ViewController;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>{
     
@@ -16,7 +17,7 @@
     NSColor* _lightColor;
     
 }
-
+@property ViewController* vc;
 @property DSDMXManager* dmxMgr;
 @property DSDMXLamp* lamp;
 

@@ -7,14 +7,24 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
-@interface ViewController : NSViewController{
+#import <DSCore/DSCore.h>
+@class DSOSCMgr;
+@class AppDelegate;
+@interface ViewController : NSViewController <DSOSCMgrDelegate>{
     NSColor* _lightColor;
+    AppDelegate* thisAppDelegate;
+    IBOutlet NSCollectionView *collectionView;
+    
+    NSImage* statusNone;
+    NSImage* statusIncoming;
+    NSImage* statusOK;
 }
+@property IBOutlet NSArrayController *arrayController;
+@property (weak) IBOutlet NSButton *blackoutButton;
+- (IBAction)addPanel:(id)sender;
 
--(NSColor*)lightColor;
--(void)setLightColor:(NSColor*)color;
-
+@property (readonly) DSOSCMgr* oscManager;
+@property NSImage *oscStatus;
 
 @end
 

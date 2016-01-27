@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -61,7 +62,7 @@
                                     <items>
                                         <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
                                             <connections>
-                                                <action selector="newDocument:" target="Ady-hI-5gd" id="4Si-XN-c54"/>
+                                                <action selector="newLight:" target="Voe-Tx-rLC" id="Iqc-WR-UkF"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
@@ -651,8 +652,8 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="OSCLight" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA" userLabel="OSCLight">
+                        <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -670,25 +671,472 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="540"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R6V-mo-Ky6">
-                                <rect key="frame" x="218" y="132" width="44" height="23"/>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcK-PI-api">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="430"/>
+                                <clipView key="contentView" id="rdd-iw-yCe">
+                                    <rect key="frame" x="1" y="1" width="478" height="428"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView selectable="YES" id="LVm-9T-lJH">
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="428"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <animations/>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <binding destination="hHD-lI-ZL2" name="content" keyPath="arrangedObjects" id="f3T-l8-gNv"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="451" id="1yw-6a-0yX"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="910" id="b9f-56-g7F"/>
+                                </constraints>
                                 <animations/>
-                                <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="0vy-pV-hfb">
+                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="tYO-7g-zZ3">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </scroller>
+                            </scrollView>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gWM-Nu-n6t">
+                                <rect key="frame" x="42" y="461" width="83" height="18"/>
+                                <animations/>
+                                <buttonCell key="cell" type="check" title="OSC Port:" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Bfg-lx-INb">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
                                 <connections>
-                                    <binding destination="XfG-lQ-9wD" name="value" keyPath="lightColor" id="2UM-jV-ODd"/>
+                                    <action selector="oscToggle:" target="XfG-lQ-9wD" id="Fhh-NT-GpW"/>
+                                    <binding destination="sr6-a7-fhY" name="value" keyPath="values.oscListen" id="bt5-aS-EPO"/>
                                 </connections>
-                            </colorWell>
+                            </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-NV-Y74">
+                                <rect key="frame" x="131" y="459" width="96" height="22"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="GdD-l0-tlX">
+                                    <numberFormatter key="formatter" formatterBehavior="10_0" positiveFormat="0" negativeFormat="-0" hasThousandSeparators="NO" thousandSeparator="," id="CrN-4g-GvY">
+                                        <attributedString key="attributedStringForZero">
+                                            <fragment content="0"/>
+                                        </attributedString>
+                                        <real key="minimum" value="0.0"/>
+                                        <real key="maximum" value="999999"/>
+                                    </numberFormatter>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="sr6-a7-fhY" name="enabled" keyPath="values.oscListen" id="6bM-0q-NEm">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="sr6-a7-fhY" name="value" keyPath="values.oscPort" id="E25-uv-R77">
+                                        <dictionary key="options">
+                                            <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lhW-x0-7Sr">
+                                <rect key="frame" x="20" y="462" width="16" height="16"/>
+                                <animations/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="znR-h3-Vqv"/>
+                                <connections>
+                                    <binding destination="XfG-lQ-9wD" name="value" keyPath="oscStatus" id="qYQ-zY-w4P"/>
+                                </connections>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJZ-cA-VJh">
+                                <rect key="frame" x="20" y="489" width="16" height="16"/>
+                                <animations/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="Whu-bH-XL2"/>
+                                <connections>
+                                    <binding destination="7Q0-Ol-5Ju" name="value" keyPath="statusLight" id="Caw-Vl-T2g"/>
+                                </connections>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QNi-fT-ouk">
+                                <rect key="frame" x="42" y="489" width="420" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="DMX Ok" id="I6o-mk-iqE">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="7Q0-Ol-5Ju" name="value" keyPath="statusMessage" id="YPc-vn-1kD"/>
+                                </connections>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LdB-GU-3Sc">
+                                <rect key="frame" x="370" y="452" width="93" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="i2B-Hu-N19"/>
+                                </constraints>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="Blackout" bezelStyle="rounded" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lfU-VG-mV2">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="globalBlackout:" target="XfG-lQ-9wD" id="xxM-jU-iKp"/>
+                                    <binding destination="sr6-a7-fhY" name="value" keyPath="values.blackout" id="Flc-Rh-ZfD"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="AcK-PI-api" firstAttribute="top" secondItem="LdB-GU-3Sc" secondAttribute="bottom" constant="29" id="2RZ-mW-GAo"/>
+                            <constraint firstItem="AcK-PI-api" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="C2O-QX-p8e"/>
+                            <constraint firstItem="AcK-PI-api" firstAttribute="top" secondItem="LdB-GU-3Sc" secondAttribute="bottom" constant="29" id="Gdz-B8-nvl"/>
+                            <constraint firstAttribute="trailing" secondItem="AcK-PI-api" secondAttribute="trailing" id="OpF-hb-bJ7"/>
+                            <constraint firstAttribute="trailing" secondItem="QNi-fT-ouk" secondAttribute="trailing" constant="20" id="RCn-39-aHf"/>
+                            <constraint firstItem="LdB-GU-3Sc" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="60" id="S2y-Jg-3lj"/>
+                            <constraint firstAttribute="trailing" secondItem="AcK-PI-api" secondAttribute="trailing" id="SWc-il-25n"/>
+                            <constraint firstItem="AcK-PI-api" firstAttribute="top" secondItem="LdB-GU-3Sc" secondAttribute="bottom" constant="29" id="UYo-Ub-9dW"/>
+                            <constraint firstItem="QNi-fT-ouk" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="34" id="YYl-ZJ-XKj"/>
+                            <constraint firstAttribute="bottom" secondItem="AcK-PI-api" secondAttribute="bottom" id="Z0g-SO-Qe7"/>
+                            <constraint firstItem="QNi-fT-ouk" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="44" id="Z7U-GG-QvR"/>
+                            <constraint firstAttribute="bottom" secondItem="AcK-PI-api" secondAttribute="bottom" id="ana-uw-uKR"/>
+                            <constraint firstAttribute="trailing" secondItem="LdB-GU-3Sc" secondAttribute="trailing" constant="23" id="fuY-33-Vr4"/>
+                            <constraint firstItem="AcK-PI-api" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="kef-vp-zYm"/>
+                        </constraints>
                         <animations/>
                     </view>
+                    <connections>
+                        <outlet property="arrayController" destination="hHD-lI-ZL2" id="bBS-fj-zsz"/>
+                        <outlet property="blackoutButton" destination="LdB-GU-3Sc" id="ML9-yg-ceE"/>
+                        <outlet property="collectionView" destination="LVm-9T-lJH" id="Nvq-JM-L9F"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="yCb-Ti-mfs" customClass="CollectionController">
+                    <connections>
+                        <outlet property="arrayController" destination="hHD-lI-ZL2" id="bxv-1P-fKj"/>
+                    </connections>
+                </customObject>
+                <customObject id="7Q0-Ol-5Ju" userLabel="DMXManager" customClass="DSDMXManager"/>
+                <arrayController objectClassName="LightPanel" id="hHD-lI-ZL2">
+                    <declaredKeys>
+                        <string>lightColor</string>
+                        <string>lightColorW</string>
+                        <string>lightColor_R</string>
+                        <string>lightColor_G</string>
+                        <string>lightColor_B</string>
+                        <string>lightColor_W</string>
+                        <string>autoWhite</string>
+                    </declaredKeys>
+                    <connections>
+                        <binding destination="yCb-Ti-mfs" name="contentArray" keyPath="lightPanels" id="K1s-dM-bSv"/>
+                    </connections>
+                </arrayController>
                 <userDefaultsController representsSharedInstance="YES" id="sr6-a7-fhY"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="790"/>
+        </scene>
+        <!--Collection View Item-->
+        <scene sceneID="fYr-mq-5SX">
+            <objects>
+                <collectionViewItem storyboardIdentifier="collectionViewItem" id="n0C-NQ-srX" sceneMemberID="viewController">
+                    <view key="view" id="WpI-mO-IRr">
+                        <rect key="frame" x="0.0" y="0.0" width="451" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box autoresizesSubviews="NO" transparent="YES" title="Box" boxType="custom" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="eqt-Ry-cx8">
+                                <rect key="frame" x="0.0" y="0.0" width="451" height="143"/>
+                                <view key="contentView" id="yng-z4-t0f">
+                                    <rect key="frame" x="1" y="1" width="449" height="141"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <colorWell bordered="NO" enabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCA-3e-wBb">
+                                            <rect key="frame" x="13" y="15" width="75" height="26"/>
+                                            <animations/>
+                                            <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <binding destination="n0C-NQ-srX" name="enabled" keyPath="representedObject.isMute" id="GAI-io-zdW">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="n0C-NQ-srX" name="value" keyPath="representedObject.lightColorW" id="3Lw-ch-OhD"/>
+                                            </connections>
+                                        </colorWell>
+                                        <slider verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hI6-86-DB8">
+                                            <rect key="frame" x="117" y="90" width="319" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="319" id="4Mh-Yj-pYX"/>
+                                            </constraints>
+                                            <animations/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="5" sliderType="linear" id="uKE-ZY-smm"/>
+                                            <connections>
+                                                <binding destination="n0C-NQ-srX" name="enabled" keyPath="representedObject.isMute" id="ica-AW-lCl">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="n0C-NQ-srX" name="value" keyPath="representedObject.lightColor_R" id="Jn9-TX-Z29"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SpF-Lv-pfa">
+                                            <rect key="frame" x="117" y="65" width="319" height="17"/>
+                                            <animations/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="5" sliderType="linear" id="3hI-jw-5xB"/>
+                                            <connections>
+                                                <binding destination="n0C-NQ-srX" name="enabled" keyPath="representedObject.isMute" id="yQv-1z-Vgf">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="n0C-NQ-srX" name="value" keyPath="representedObject.lightColor_G" id="a8b-Sh-sj8"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zui-w0-hPs">
+                                            <rect key="frame" x="117" y="40" width="319" height="17"/>
+                                            <animations/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="5" sliderType="linear" id="UQt-01-GR4"/>
+                                            <connections>
+                                                <binding destination="n0C-NQ-srX" name="enabled" keyPath="representedObject.isMute" id="iSO-bI-JPr">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="n0C-NQ-srX" name="value" keyPath="representedObject.lightColor_B" id="y9f-OH-zDo"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uR5-PZ-M3C">
+                                            <rect key="frame" x="117" y="15" width="319" height="17"/>
+                                            <animations/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="5" sliderType="linear" id="Mc3-qz-Jby"/>
+                                            <connections>
+                                                <binding destination="n0C-NQ-srX" name="enabled" keyPath="representedObject.isMute" id="WGD-oR-N99">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="n0C-NQ-srX" name="value" keyPath="representedObject.lightColor_W" id="4Zb-QJ-PaE"/>
+                                            </connections>
+                                        </slider>
+                                        <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0l-ag-pKm">
+                                            <rect key="frame" x="94" y="119" width="69" height="21"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="check" title="Auto white" bezelStyle="regularSquare" imagePosition="left" controlSize="mini" state="on" inset="2" id="Uek-BO-4qS">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <binding destination="n0C-NQ-srX" name="value" keyPath="representedObject.autoWhite" id="jP5-kG-8vj"/>
+                                                <binding destination="n0C-NQ-srX" name="enabled" keyPath="representedObject.isMute" id="woZ-0i-B7Z">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XqH-ls-EzL">
+                                            <rect key="frame" x="95" y="98" width="13" height="11"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="9" id="Lxc-5j-gac"/>
+                                            </constraints>
+                                            <animations/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="R" id="Azh-dt-Lsy">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vym-e3-cBV">
+                                            <rect key="frame" x="95" y="73" width="14" height="11"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="G" id="pKo-Qr-PdT">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lqy-Bn-Z4T">
+                                            <rect key="frame" x="96" y="48" width="13" height="11"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="B" id="Oj8-P4-0Te">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2P3-Pi-oIq">
+                                            <rect key="frame" x="94" y="23" width="17" height="11"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="W" id="7ML-cU-F5m">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kiQ-lg-NBn">
+                                            <rect key="frame" x="365" y="121" width="77" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="t0S-J8-y4R"/>
+                                            </constraints>
+                                            <animations/>
+                                            <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" controlSize="mini" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VpB-vZ-cNU">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <binding destination="n0C-NQ-srX" name="argument" keyPath="representedObject" id="KRx-Up-cAK">
+                                                    <dictionary key="options">
+                                                        <string key="NSSelectorName">resetLight:</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="n0C-NQ-srX" name="target" keyPath="representedObject" previousBinding="KRx-Up-cAK" id="QXY-Jn-fu3">
+                                                    <dictionary key="options">
+                                                        <string key="NSSelectorName">resetLight:</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="n0C-NQ-srX" name="enabled" keyPath="representedObject.isMute" id="55c-kq-tda">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
+                                        </button>
+                                        <box verticalHuggingPriority="750" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="cjj-x8-I5g">
+                                            <rect key="frame" x="0.0" y="115" width="470" height="4"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" id="Vv9-eW-fug"/>
+                                            </constraints>
+                                            <animations/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </box>
+                                        <colorWell misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ew-9Y-rBz">
+                                            <rect key="frame" x="13" y="40" width="75" height="69"/>
+                                            <animations/>
+                                            <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <binding destination="n0C-NQ-srX" name="enabled" keyPath="representedObject.isMute" id="69s-ZA-blk">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="n0C-NQ-srX" name="value" keyPath="representedObject.lightColor" id="hbr-rr-SWb"/>
+                                            </connections>
+                                        </colorWell>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zk4-KE-Ib3">
+                                            <rect key="frame" x="11" y="124" width="30" height="11"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="26" id="cGa-3n-NLy"/>
+                                            </constraints>
+                                            <animations/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Ch#" id="GUb-rY-h7w">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AO0-Nm-hhk">
+                                            <rect key="frame" x="35" y="122" width="53" height="14"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="53" id="qWK-Ps-zab"/>
+                                            </constraints>
+                                            <animations/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="SSH-Nz-Ac6">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="n0C-NQ-srX" name="value" keyPath="representedObject.channel" id="Mal-8q-CoX"/>
+                                                <binding destination="n0C-NQ-srX" name="enabled" keyPath="representedObject.isMute" id="dJU-na-Iab">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hI6-86-DB8" firstAttribute="baseline" secondItem="XqH-ls-EzL" secondAttribute="baseline" id="0GI-wD-Ohf"/>
+                                        <constraint firstItem="zk4-KE-Ib3" firstAttribute="leading" secondItem="yng-z4-t0f" secondAttribute="leading" constant="13" id="1qC-xh-3GZ"/>
+                                        <constraint firstItem="XqH-ls-EzL" firstAttribute="top" secondItem="9ew-9Y-rBz" secondAttribute="top" id="3xu-As-gmX"/>
+                                        <constraint firstItem="Vym-e3-cBV" firstAttribute="leading" secondItem="XqH-ls-EzL" secondAttribute="leading" id="4ii-bR-rch"/>
+                                        <constraint firstItem="VCA-3e-wBb" firstAttribute="trailing" secondItem="9ew-9Y-rBz" secondAttribute="trailing" id="6BL-lV-oZJ"/>
+                                        <constraint firstItem="9ew-9Y-rBz" firstAttribute="trailing" secondItem="AO0-Nm-hhk" secondAttribute="trailing" id="6Kn-V2-SbR"/>
+                                        <constraint firstItem="9ew-9Y-rBz" firstAttribute="top" secondItem="cjj-x8-I5g" secondAttribute="bottom" constant="8" id="7pq-vt-r8z"/>
+                                        <constraint firstAttribute="bottom" secondItem="VCA-3e-wBb" secondAttribute="bottom" constant="15" id="8Ad-8s-aTn"/>
+                                        <constraint firstItem="Vym-e3-cBV" firstAttribute="trailing" secondItem="Lqy-Bn-Z4T" secondAttribute="trailing" id="9s3-z6-Zai"/>
+                                        <constraint firstItem="AO0-Nm-hhk" firstAttribute="centerY" secondItem="b0l-ag-pKm" secondAttribute="centerY" id="C93-iZ-S1K"/>
+                                        <constraint firstAttribute="trailing" secondItem="kiQ-lg-NBn" secondAttribute="trailing" constant="8" id="D2Y-nr-1es"/>
+                                        <constraint firstItem="AO0-Nm-hhk" firstAttribute="baseline" secondItem="zk4-KE-Ib3" secondAttribute="baseline" id="E3o-pT-QPY"/>
+                                        <constraint firstItem="SpF-Lv-pfa" firstAttribute="leading" secondItem="Vym-e3-cBV" secondAttribute="trailing" constant="10" id="Ej9-A8-hGs"/>
+                                        <constraint firstItem="XqH-ls-EzL" firstAttribute="centerX" secondItem="Vym-e3-cBV" secondAttribute="centerX" id="Has-RB-eeA"/>
+                                        <constraint firstItem="hI6-86-DB8" firstAttribute="leading" secondItem="SpF-Lv-pfa" secondAttribute="leading" id="Ko0-VK-cEM"/>
+                                        <constraint firstItem="AO0-Nm-hhk" firstAttribute="centerY" secondItem="zk4-KE-Ib3" secondAttribute="centerY" id="L6P-0W-Z3m"/>
+                                        <constraint firstItem="2P3-Pi-oIq" firstAttribute="leading" secondItem="VCA-3e-wBb" secondAttribute="trailing" constant="8" symbolic="YES" id="NaC-eD-m7B"/>
+                                        <constraint firstItem="uR5-PZ-M3C" firstAttribute="bottom" secondItem="VCA-3e-wBb" secondAttribute="bottom" id="POV-7x-0Gm"/>
+                                        <constraint firstAttribute="trailing" secondItem="cjj-x8-I5g" secondAttribute="trailing" constant="-21" id="SG0-vd-jTi"/>
+                                        <constraint firstItem="kiQ-lg-NBn" firstAttribute="baseline" secondItem="AO0-Nm-hhk" secondAttribute="baseline" id="UhB-Pg-3XV"/>
+                                        <constraint firstItem="b0l-ag-pKm" firstAttribute="top" secondItem="AO0-Nm-hhk" secondAttribute="top" constant="1" id="WDv-tI-NmL"/>
+                                        <constraint firstItem="SpF-Lv-pfa" firstAttribute="trailing" secondItem="zui-w0-hPs" secondAttribute="trailing" id="WQF-Vq-S5U"/>
+                                        <constraint firstItem="AO0-Nm-hhk" firstAttribute="leading" secondItem="yng-z4-t0f" secondAttribute="leading" constant="35" id="XHC-EZ-qZU"/>
+                                        <constraint firstItem="zk4-KE-Ib3" firstAttribute="leading" secondItem="9ew-9Y-rBz" secondAttribute="leading" id="ZvT-cK-mih"/>
+                                        <constraint firstItem="9ew-9Y-rBz" firstAttribute="bottom" secondItem="zui-w0-hPs" secondAttribute="bottom" id="a9J-2Y-pPK"/>
+                                        <constraint firstItem="SpF-Lv-pfa" firstAttribute="top" secondItem="hI6-86-DB8" secondAttribute="bottom" constant="9" id="ahO-a9-Pd3"/>
+                                        <constraint firstItem="SpF-Lv-pfa" firstAttribute="leading" secondItem="zui-w0-hPs" secondAttribute="leading" id="anY-y6-vJX"/>
+                                        <constraint firstItem="uR5-PZ-M3C" firstAttribute="leading" secondItem="zui-w0-hPs" secondAttribute="leading" id="b4N-jm-bHB"/>
+                                        <constraint firstItem="uR5-PZ-M3C" firstAttribute="trailing" secondItem="zui-w0-hPs" secondAttribute="trailing" id="c4F-Te-dK4"/>
+                                        <constraint firstItem="kiQ-lg-NBn" firstAttribute="trailing" secondItem="hI6-86-DB8" secondAttribute="trailing" constant="5" id="c8Q-gl-Bal"/>
+                                        <constraint firstItem="cjj-x8-I5g" firstAttribute="top" secondItem="AO0-Nm-hhk" secondAttribute="bottom" constant="5" id="d6k-fo-f7o"/>
+                                        <constraint firstItem="2P3-Pi-oIq" firstAttribute="centerY" secondItem="VCA-3e-wBb" secondAttribute="centerY" id="dbC-Mc-xTq"/>
+                                        <constraint firstItem="hI6-86-DB8" firstAttribute="trailing" secondItem="SpF-Lv-pfa" secondAttribute="trailing" id="fWn-54-ZxJ"/>
+                                        <constraint firstItem="Lqy-Bn-Z4T" firstAttribute="baseline" secondItem="zui-w0-hPs" secondAttribute="baseline" id="hxd-Sp-6HA"/>
+                                        <constraint firstItem="Lqy-Bn-Z4T" firstAttribute="leading" secondItem="b0l-ag-pKm" secondAttribute="leading" id="irB-8R-shT"/>
+                                        <constraint firstItem="zui-w0-hPs" firstAttribute="top" secondItem="SpF-Lv-pfa" secondAttribute="bottom" constant="9" id="mtm-xW-UuA"/>
+                                        <constraint firstItem="Lqy-Bn-Z4T" firstAttribute="centerX" secondItem="Vym-e3-cBV" secondAttribute="centerX" id="qTm-xC-f2h"/>
+                                        <constraint firstItem="VCA-3e-wBb" firstAttribute="leading" secondItem="9ew-9Y-rBz" secondAttribute="leading" id="sCL-uY-Qll"/>
+                                        <constraint firstItem="SpF-Lv-pfa" firstAttribute="baseline" secondItem="Vym-e3-cBV" secondAttribute="baseline" id="saB-0f-5mj"/>
+                                        <constraint firstItem="cjj-x8-I5g" firstAttribute="leading" secondItem="yng-z4-t0f" secondAttribute="leading" id="t4M-b8-7o0"/>
+                                        <constraint firstItem="2P3-Pi-oIq" firstAttribute="baseline" secondItem="uR5-PZ-M3C" secondAttribute="baseline" id="yUn-qv-rtF"/>
+                                        <constraint firstItem="uR5-PZ-M3C" firstAttribute="top" secondItem="zui-w0-hPs" secondAttribute="bottom" constant="9" id="ydb-Y3-m2p"/>
+                                    </constraints>
+                                    <animations/>
+                                </view>
+                                <animations/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <binding destination="n0C-NQ-srX" name="transparent" keyPath="selected" id="rLB-Xv-IIo">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="eqt-Ry-cx8" firstAttribute="leading" secondItem="WpI-mO-IRr" secondAttribute="leading" id="6mt-Ed-JEj"/>
+                            <constraint firstAttribute="bottom" secondItem="eqt-Ry-cx8" secondAttribute="bottom" id="7hm-ob-Agz"/>
+                            <constraint firstAttribute="trailing" secondItem="eqt-Ry-cx8" secondAttribute="trailing" id="hjd-PO-8So"/>
+                            <constraint firstItem="eqt-Ry-cx8" firstAttribute="top" secondItem="WpI-mO-IRr" secondAttribute="top" id="l0h-6f-mez"/>
+                        </constraints>
+                        <animations/>
+                    </view>
+                </collectionViewItem>
+                <customObject id="IU6-F6-o16" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="13N-JH-J8I"/>
+            </objects>
+            <point key="canvasLocation" x="0.5" y="1228.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSStatusAvailable" width="16" height="16"/>
+    </resources>
 </document>
