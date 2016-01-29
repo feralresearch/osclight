@@ -16,12 +16,20 @@
     
     self = [super init];
     if (self) {
-        DSDMXBox* firstBox = [[[DSDMXManager sharedInstance] availableDevices] firstObject];
-        _lamp = [[DSDMXLamp alloc] initChannel:1 onBox:firstBox];
 
     }
     
     return self;
+}
+
+
+-(NSString*)channel{
+    return _channel;
+}
+-(void)setChannel:(NSString*)chan{
+    _channel=chan;
+    _lamp = [[DSDMXLamp alloc] initChannel:[chan integerValue] onBox:[[[DSDMXManager sharedInstance] availableDevices] firstObject]];
+    [self setLightColor:_lightColor];
 }
 
 
@@ -162,9 +170,7 @@
         
         
         _channel = [coder decodeObjectForKey:@"channel"];
-        
-        float r =[coder decodeFloatForKey:@"lightcolor_r"];
-        
+                
         _lightColor = [NSColor colorWithCalibratedRed:[coder decodeFloatForKey:@"lightcolor_r"]
                                                 green:[coder decodeFloatForKey:@"lightcolor_g"]
                                                  blue:[coder decodeFloatForKey:@"lightcolor_b"]

@@ -14,11 +14,16 @@
     NSColor* _lightColor;
     NSColor* _lightColorW;
     NSColor* previousColor;
+    NSString* _channel;
 }
 
 @property BOOL isMute;
-@property NSString* channel;
 @property DSDMXLamp* lamp;
+
+
+
+-(NSString*)channel;
+-(void)setChannel:(NSString*)chan;
 
 -(NSColor*)lightColor;
 -(void)setLightColor:(NSColor*)color;

@@ -163,7 +163,7 @@
  
  
 */
--(void) receivedOSCMessage:(OSCMessage *)m	{
+-(void)receivedOSCMessage:(OSCMessage *)m	{
 
     // Blink the light
     [self oscBlinkStatus];

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "18DE12F8BF8C2FE08FB21302FE1E00BE56F6B9FB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6A70A0A09877C77B69187FF0F18FEADC54F1DD0A" : 0,
+    "18DE12F8BF8C2FE08FB21302FE1E00BE56F6B9FB" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E929644F-C665-4F9F-8D1D-32FB536D38EA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6A70A0A09877C77B69187FF0F18FEADC54F1DD0A" : "DSCore\/",
+    "18DE12F8BF8C2FE08FB21302FE1E00BE56F6B9FB" : "OSCLight\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "OSCLight",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "OSCLight.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:tezcatlipoca\/osclight.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "18DE12F8BF8C2FE08FB21302FE1E00BE56F6B9FB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:tezcatlipoca\/dscore.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6A70A0A09877C77B69187FF0F18FEADC54F1DD0A"
+    }
+  ]
+}
