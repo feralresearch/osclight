@@ -28,7 +28,7 @@
 }
 -(void)setChannel:(NSString*)chan{
     _channel=chan;
-    _lamp = [[DSDMXLamp alloc] initChannel:[chan integerValue] onBox:[[[DSDMXManager sharedInstance] availableDevices] firstObject]];
+    _lamp = [[DSDMXLamp alloc] initChannel:(int)[chan integerValue] onBox:[[[DSDMXManager sharedInstance] availableDevices] firstObject]];
     [self setLightColor:_lightColor];
 }
 
