@@ -878,8 +878,8 @@
                                                 <binding destination="n0C-NQ-srX" name="value" keyPath="representedObject.lightColorW" id="3Lw-ch-OhD"/>
                                             </connections>
                                         </colorWell>
-                                        <slider verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hI6-86-DB8">
-                                            <rect key="frame" x="117" y="90" width="319" height="17"/>
+                                        <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hI6-86-DB8">
+                                            <rect key="frame" x="117" y="90" width="319" height="16"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="319" id="4Mh-Yj-pYX"/>
                                             </constraints>
@@ -894,8 +894,8 @@
                                                 <binding destination="n0C-NQ-srX" name="value" keyPath="representedObject.lightColor_R" id="Jn9-TX-Z29"/>
                                             </connections>
                                         </slider>
-                                        <slider verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SpF-Lv-pfa">
-                                            <rect key="frame" x="117" y="65" width="319" height="17"/>
+                                        <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SpF-Lv-pfa">
+                                            <rect key="frame" x="117" y="65" width="319" height="16"/>
                                             <animations/>
                                             <sliderCell key="cell" controlSize="mini" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="5" sliderType="linear" id="3hI-jw-5xB"/>
                                             <connections>
@@ -907,8 +907,8 @@
                                                 <binding destination="n0C-NQ-srX" name="value" keyPath="representedObject.lightColor_G" id="a8b-Sh-sj8"/>
                                             </connections>
                                         </slider>
-                                        <slider verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zui-w0-hPs">
-                                            <rect key="frame" x="117" y="40" width="319" height="17"/>
+                                        <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zui-w0-hPs">
+                                            <rect key="frame" x="117" y="40" width="319" height="16"/>
                                             <animations/>
                                             <sliderCell key="cell" controlSize="mini" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="5" sliderType="linear" id="UQt-01-GR4"/>
                                             <connections>
@@ -921,7 +921,7 @@
                                             </connections>
                                         </slider>
                                         <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uR5-PZ-M3C">
-                                            <rect key="frame" x="117" y="15" width="319" height="17"/>
+                                            <rect key="frame" x="117" y="15" width="319" height="16"/>
                                             <animations/>
                                             <sliderCell key="cell" controlSize="mini" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="5" sliderType="linear" id="Mc3-qz-Jby"/>
                                             <connections>
@@ -933,7 +933,7 @@
                                                 <binding destination="n0C-NQ-srX" name="value" keyPath="representedObject.lightColor_W" id="4Zb-QJ-PaE"/>
                                             </connections>
                                         </slider>
-                                        <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0l-ag-pKm">
+                                        <button translatesAutoresizingMaskIntoConstraints="NO" id="b0l-ag-pKm">
                                             <rect key="frame" x="94" y="121" width="69" height="21"/>
                                             <animations/>
                                             <buttonCell key="cell" type="check" title="Auto white" bezelStyle="regularSquare" imagePosition="left" controlSize="mini" state="on" inset="2" id="Uek-BO-4qS">
@@ -949,7 +949,7 @@
                                                 </binding>
                                             </connections>
                                         </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XqH-ls-EzL">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XqH-ls-EzL">
                                             <rect key="frame" x="95" y="98" width="13" height="11"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="9" id="Lxc-5j-gac"/>
@@ -961,7 +961,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vym-e3-cBV">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vym-e3-cBV">
                                             <rect key="frame" x="95" y="73" width="14" height="11"/>
                                             <animations/>
                                             <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="G" id="pKo-Qr-PdT">
@@ -970,7 +970,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lqy-Bn-Z4T">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lqy-Bn-Z4T">
                                             <rect key="frame" x="96" y="48" width="13" height="11"/>
                                             <animations/>
                                             <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="B" id="Oj8-P4-0Te">
@@ -988,7 +988,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kiQ-lg-NBn">
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kiQ-lg-NBn">
                                             <rect key="frame" x="365" y="121" width="77" height="16"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="75" id="t0S-J8-y4R"/>
@@ -1016,7 +1016,7 @@
                                                 </binding>
                                             </connections>
                                         </button>
-                                        <box verticalHuggingPriority="750" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="cjj-x8-I5g">
+                                        <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="cjj-x8-I5g">
                                             <rect key="frame" x="0.0" y="115" width="470" height="4"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" id="Vv9-eW-fug"/>
@@ -1026,7 +1026,7 @@
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
-                                        <colorWell misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ew-9Y-rBz">
+                                        <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="9ew-9Y-rBz">
                                             <rect key="frame" x="13" y="40" width="75" height="69"/>
                                             <animations/>
                                             <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1039,7 +1039,7 @@
                                                 <binding destination="n0C-NQ-srX" name="value" keyPath="representedObject.lightColor" id="hbr-rr-SWb"/>
                                             </connections>
                                         </colorWell>
-                                        <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AO0-Nm-hhk">
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AO0-Nm-hhk">
                                             <rect key="frame" x="13" y="122" width="75" height="16"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="75" id="qWK-Ps-zab"/>

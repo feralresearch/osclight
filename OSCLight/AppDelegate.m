@@ -29,11 +29,11 @@
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     
     // Shutdown DMX
-    //[_dmxMgr shutDown];
+    [_dmxMgr shutDown];
     
     // Store lightPanels
-    //NSData *data = [NSKeyedArchiver archivedDataWithRootObject:_vc.arrayController.arrangedObjects];
-    //[[NSUserDefaults standardUserDefaults] setObject:data forKey:@"lightPanels"];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:_vc.arrayController.arrangedObjects];
+    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"lightPanels"];
     
 }
 
