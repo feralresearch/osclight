@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CollectionController.h"
 @class DSDMXManager;
 @class DSDMXLamp;
 @class ViewController;
@@ -17,6 +18,7 @@
     NSColor* _lightColor;
     
 }
+@property CollectionController* cc;
 @property ViewController* vc;
 @property DSDMXManager* dmxMgr;
 @property DSDMXLamp* lamp;

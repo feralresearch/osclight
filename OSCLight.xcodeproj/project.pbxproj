@@ -12,13 +12,15 @@
 		491390E71C2445E500D82826 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491390E61C2445E500D82826 /* ViewController.m */; };
 		491390E91C2445E500D82826 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491390E81C2445E500D82826 /* Assets.xcassets */; };
 		491390EC1C2445E500D82826 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491390EA1C2445E500D82826 /* Main.storyboard */; };
-		491391171C244AC000D82826 /* libftd2xx.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 491391161C244AC000D82826 /* libftd2xx.dylib */; settings = {ASSET_TAGS = (); }; };
 		49240D621C596F5000FE6C7C /* DSCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 490A9B361C57B8290005C7EF /* DSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49240D631C596F5900FE6C7C /* VVOSC.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 490A9BD61C57CA980005C7EF /* VVOSC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49240D641C596F5D00FE6C7C /* VVBasics.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 490A9BCA1C57CA980005C7EF /* VVBasics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4935CC801C565C4900A22FB2 /* LightPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4935CC7F1C565C4900A22FB2 /* LightPanel.m */; settings = {ASSET_TAGS = (); }; };
 		4935CC831C565C5400A22FB2 /* CollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4935CC821C565C5400A22FB2 /* CollectionController.m */; settings = {ASSET_TAGS = (); }; };
+		493851B41C6BD93600FE74D0 /* libftd2xx.1.2.2.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 493851B21C6BD92C00FE74D0 /* libftd2xx.1.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		493851B51C6BD93D00FE74D0 /* libftd2xx.1.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 493851B21C6BD92C00FE74D0 /* libftd2xx.1.2.2.dylib */; };
 		499686A71C59704900DD6087 /* Syphon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 499686A41C59703700DD6087 /* Syphon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49BE24FF1C6C03400008B7EC /* icon_settings.icns in Resources */ = {isa = PBXBuildFile; fileRef = 49BE24FE1C6C03400008B7EC /* icon_settings.icns */; settings = {ASSET_TAGS = (); }; };
 		49E2360F1C596A130079B56E /* DSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490A9B361C57B8290005C7EF /* DSCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -256,6 +258,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				493851B41C6BD93600FE74D0 /* libftd2xx.1.2.2.dylib in CopyFiles */,
 				49240D621C596F5000FE6C7C /* DSCore.framework in CopyFiles */,
 				499686A71C59704900DD6087 /* Syphon.framework in CopyFiles */,
 				49240D641C596F5D00FE6C7C /* VVBasics.framework in CopyFiles */,
@@ -276,13 +279,14 @@
 		491390E81C2445E500D82826 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		491390EB1C2445E500D82826 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		491390ED1C2445E500D82826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		491391161C244AC000D82826 /* libftd2xx.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libftd2xx.dylib; path = ../libftd2xx.dylib; sourceTree = "<group>"; };
 		4935CC7E1C565C4900A22FB2 /* LightPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightPanel.h; sourceTree = "<group>"; };
 		4935CC7F1C565C4900A22FB2 /* LightPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightPanel.m; sourceTree = "<group>"; };
 		4935CC811C565C5400A22FB2 /* CollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionController.h; sourceTree = "<group>"; };
 		4935CC821C565C5400A22FB2 /* CollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionController.m; sourceTree = "<group>"; };
+		493851B21C6BD92C00FE74D0 /* libftd2xx.1.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libftd2xx.1.2.2.dylib; path = OSCLight/libftd2xx.1.2.2.dylib; sourceTree = "<group>"; };
 		498331391C56F17000467AFA /* DSCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DSCore.xcodeproj; path = ../DSCore/DSCore.xcodeproj; sourceTree = "<group>"; };
 		4996869E1C59703600DD6087 /* Syphon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Syphon.xcodeproj; path = "../DSCore/Frameworks/Syphon-Framework-public-beta-2/Syphon.xcodeproj"; sourceTree = "<group>"; };
+		49BE24FE1C6C03400008B7EC /* icon_settings.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon_settings.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,8 +294,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				491391171C244AC000D82826 /* libftd2xx.dylib in Frameworks */,
 				49E2360F1C596A130079B56E /* DSCore.framework in Frameworks */,
+				493851B51C6BD93D00FE74D0 /* libftd2xx.1.2.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +346,8 @@
 		491390D31C2445E500D82826 = {
 			isa = PBXGroup;
 			children = (
+				49BE24FE1C6C03400008B7EC /* icon_settings.icns */,
+				493851B21C6BD92C00FE74D0 /* libftd2xx.1.2.2.dylib */,
 				4996869E1C59703600DD6087 /* Syphon.xcodeproj */,
 				490A9BA91C57CA980005C7EF /* VVOpenSource.xcodeproj */,
 				498331391C56F17000467AFA /* DSCore.xcodeproj */,
@@ -368,7 +374,6 @@
 				491390E81C2445E500D82826 /* Assets.xcassets */,
 				491390EA1C2445E500D82826 /* Main.storyboard */,
 				491390ED1C2445E500D82826 /* Info.plist */,
-				491391161C244AC000D82826 /* libftd2xx.dylib */,
 				491390E21C2445E500D82826 /* Supporting Files */,
 				4935CC7E1C565C4900A22FB2 /* LightPanel.h */,
 				4935CC7F1C565C4900A22FB2 /* LightPanel.m */,
@@ -670,6 +675,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				491390E91C2445E500D82826 /* Assets.xcassets in Resources */,
+				49BE24FF1C6C03400008B7EC /* icon_settings.icns in Resources */,
 				491390EC1C2445E500D82826 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -745,7 +751,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -791,7 +797,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -822,6 +828,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/OSCLight",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = digitalscenographic.com.OSCLight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -839,6 +846,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/OSCLight",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = digitalscenographic.com.OSCLight;
 				PRODUCT_NAME = "$(TARGET_NAME)";

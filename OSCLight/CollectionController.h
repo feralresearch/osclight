@@ -7,11 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class AppDelegate;
 @class LightPanel;
 @interface CollectionController : NSObject{
     IBOutlet NSArrayController* arrayController;
+    AppDelegate* thisAppDelegate;
 }
 
 @property NSMutableArray* lightPanels;
+
+
+-(void)reloadFromSettings;
 
 @end
